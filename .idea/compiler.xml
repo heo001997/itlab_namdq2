@@ -9,8 +9,5 @@
         <module name="bai12" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="bai12" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
