@@ -3,9 +3,9 @@ public class TimeOutThread extends Thread {
         while (true) {
             System.out.println(Thread.currentThread().getName() + " is running...");
             try {
-                Thread.sleep(0);
+                Thread.sleep(1000);
             } catch (InterruptedException ex) {
-                Thread.currentThread().interrupt(); // very important
+                Thread.currentThread().interrupt();
                 break;
             }
         }
