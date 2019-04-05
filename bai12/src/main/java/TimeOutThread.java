@@ -15,9 +15,11 @@ public class TimeOutThread extends Thread {
 
     public void run() {
         try {
-            lock.lockInterruptibly();
+            lock.lock();
             System.out.println(Thread.currentThread().getName() + "is running");
             for (; ; ) {
+
+                //  todoSomething();
 
                 if (timeWait <= 0) {
                     break;
@@ -25,17 +27,15 @@ public class TimeOutThread extends Thread {
                 try {
                     timeWait = condition.awaitNanos(timeWait);
                 } catch (InterruptedException ie) {
-                    condition.signal();
                     break;
                 }
             }
             System.out.println(Thread.currentThread().getName() + " is shutdown");
-        } catch (InterruptedException e) {
-
         } finally {
             lock.unlock();
         }
     }
+
 //    downloadUsingStream("https://speed.hetzner.de/100MB.bin", "100MB.bin");
 
 //    private static void downloadUsingStream(String urlStr, String file) {
