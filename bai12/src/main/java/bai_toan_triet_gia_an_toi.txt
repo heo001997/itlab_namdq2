@@ -1,0 +1,24 @@
+﻿Bài toán
+========
+- Có 5 triết gia, ngồi xung quanh một cái bàn tròn, dành cả đời chỉ để ăn và suy nghĩ.
+- Trên bàn tròn có 5 chiếc đũa được đặt xen kẻ giữa các triết gia. 
+- Mỗi khi có một triết gia đói bụng, ông ta sẽ lấy lần lượt hai chiếc đũa bên trái và 
+bên phải gần mình nhất để ăn. Trong thời thời gian ăn, ông không đặt đũa xuống.
+- Sau khi ăn xong triết gia sẽ trả hai chiếc đũa về chỗ cũ, để các ông còn lại có thể 
+dùng nếu đói.
+
+=> Hãy đảm bảo rằng không có vị triết gia nào chết đói?
+=> Hãy đảm bảo rằng không rơi vào trạng thái khóa vĩnh viễn (deadlock), khi các triết gia 
+đều đói và đều cầm chiếc đũa trái, đang chờ chiếc đũa phải.
+
+Giải pháp để không rơi vào trạng thái khóa vĩnh viễn
+========
+GP1:
+- Cho phép nhiều nhất bốn triết gia đang ngồi cùng một lúc trên bàn.
+GP2:
+- Cho phép một triết gia lấy chiếc đũa của ông ta chỉ nếu cả hai chiếc đũa là sẳn dùng.
+GP3:
+- Các triết gia ngồi so le nhau thì cầm chiếc đũa đầu tiên lên đối xứng nhau,
+
+Ví dụ: ông đầu tiên cầm chiếc đũa trái rồi mới cầm chiếc đũa phải, thì ông tiếp theo cầm
+chiếc đũa phải trước khi cầm đũa trái.
