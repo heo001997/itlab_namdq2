@@ -22,3 +22,7 @@ GP3:
 
 Ví dụ: ông đầu tiên cầm chiếc đũa trái rồi mới cầm chiếc đũa phải, thì ông tiếp theo cầm
 chiếc đũa phải trước khi cầm đũa trái.
+
+GP4: Giới hạn thời gian chờ của triết gia. (nếu ông ta đang giữ chiếc đũa trái, thì sau
+thời gian x nào đó, mà ông ta vẫn chưa lấy được chiếc đũa phải, thì buộc phải bỏ chiếc
+đũa trái xuống.)

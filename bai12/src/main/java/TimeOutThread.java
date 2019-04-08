@@ -16,7 +16,7 @@ public class TimeOutThread extends Thread {
     public void run() {
         try {
             lock.lock();
-            System.out.println(Thread.currentThread().getName() + "is running");
+            System.out.println("\t" + Thread.currentThread().getName() + " is running...");
             for (; ; ) {
 
                 //  todoSomething();
@@ -30,7 +30,7 @@ public class TimeOutThread extends Thread {
                     break;
                 }
             }
-            System.out.println(Thread.currentThread().getName() + " is shutdown");
+            System.out.println("\t" + Thread.currentThread().getName() + " is shutdown.");
         } finally {
             lock.unlock();
         }
