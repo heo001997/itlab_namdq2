@@ -1,0 +1,7 @@
+- Hinh anh Bitmap khong duoc nen, dung luong goc cua anh
+- Hinh anh PNG duoc nen (lossless). Nhung gia tri gan nhau va giong nhau duoc nen ve so luong
+    vi du: "111111" nen thanh "61"
+- Nen: tuy thuoc vao anh:
+    + anh co nhieu mau giong nhau gan nhau: size(BMP) > size(PNG)
+    + anh co nhieu mau khac nhau (trong code em random pixel): size(BMP) < size(PNG)
+        khac biet khong dang ke

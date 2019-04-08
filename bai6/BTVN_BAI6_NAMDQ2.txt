@@ -1,0 +1,9 @@
+﻿Tìm hiểu về static: 
+- static được trong 4 trường hợp
+    + biến static
+    + phương thức static
+    + lớp static
+    + khối static (trước phiên bản 1.7)
+- còn gọi là biến/phương thức/lớp/khối tĩnh, dùng chunng chương trình, 
+nên được khởi tạo đầu tiên và một lần trong khi biên dịch chương trình.
+- Vị trí lưu dữ liệu không phụ thuộc vào static.

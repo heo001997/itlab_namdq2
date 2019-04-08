@@ -1,0 +1,4 @@
+﻿Tìm hiểu về exception: XMLParseException
+---
+Ngoại lệ này được đưa ra khi một chuỗi được định dạng XML đang được phân tích cú pháp thành 
+các đối tượng Model hoặc khi các chuỗi được định dạng XML đang được tạo từ các đối tượng Model.
