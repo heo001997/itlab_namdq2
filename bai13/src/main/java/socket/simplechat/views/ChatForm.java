@@ -20,6 +20,10 @@ public class ChatForm extends JFrame implements ActionListener {
         initUI();
     }
 
+    public JButton getBtnSend() {
+        return btnSend;
+    }
+
     public void setListener(Listener listener) {
         this.listener = listener;
     }

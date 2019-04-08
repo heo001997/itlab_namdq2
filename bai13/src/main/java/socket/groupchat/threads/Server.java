@@ -38,6 +38,8 @@ public class Server extends Thread {
 
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (Exception e) {
+            e.fillInStackTrace();
         } finally {
             try {
                 socket.close();

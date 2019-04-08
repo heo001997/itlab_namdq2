@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="69de1e95-c2f7-44ec-9a01-1aa21f2aa92e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/utils/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/utils/Global.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/ClientDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/ClientDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai4/data/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bai4/data/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/views/ChatForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/views/ChatForm.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+            <state relative-caret-position="323">
+              <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Main.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+            <state relative-caret-position="175">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,8 +62,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="68" column="80" selection-start-line="68" selection-start-column="80" selection-end-line="68" selection-end-column="80" />
+            <state relative-caret-position="342">
+              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/ManualClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,7 +104,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/threads/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
+            <state relative-caret-position="274">
               <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -105,8 +116,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/views/ChatForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+            <state relative-caret-position="954">
+              <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+              <folding>
+                <element signature="e#526#527#0" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/threads/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="62" column="13" lean-forward="true" selection-start-line="56" selection-start-column="11" selection-end-line="62" selection-end-column="13" />
+            <state relative-caret-position="612">
+              <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,7 +181,6 @@
         <option value="$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/utils/Global.java" />
         <option value="$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/threads/Server.java" />
         <option value="$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/threads/Client.java" />
-        <option value="$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/views/ChatForm.java" />
         <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/ServerConnect.java" />
         <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/RealThread.java" />
         <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/ReadThread.java" />
@@ -174,9 +188,12 @@
         <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/utils/Global.java" />
         <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/utils/Global.java" />
         <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Group.java" />
-        <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Server.java" />
-        <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Client.java" />
         <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Main.java" />
+        <option value="$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/views/ChatForm.java" />
+        <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Server.java" />
+        <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/Main.java" />
+        <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Client.java" />
+        <option value="$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/ManualClient.java" />
       </list>
     </option>
   </component>
@@ -308,6 +325,17 @@
               <item name="simplechat" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="itlab_namdq2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itlab_namdq2" type="462c0819:PsiDirectoryNode" />
+              <item name="bai13" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
+              <item name="simplechat" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -343,26 +371,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.ManualClient">
     <configuration name="ChatForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="socket.simplechat.views.ChatForm" />
       <module name="bai13" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="socket.simplechat.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="socket.simplechat.threads.Client" />
-      <module name="bai13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="socket.simplechat.threads.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -384,11 +399,24 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="socket.groupchat.threads.Main" />
+      <option name="MAIN_CLASS_NAME" value="socket.groupchat.Main" />
       <module name="bai13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="socket.groupchat.threads.*" />
+          <option name="PATTERN" value="socket.groupchat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManualClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="socket.groupchat.ManualClient" />
+      <module name="bai13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="socket.groupchat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -401,7 +429,7 @@
       <module name="bai13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="socket.groupchat.threads.*" />
+          <option name="PATTERN" value="socket.groupchat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -431,11 +459,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ManualClient" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Server (1)" />
         <item itemvalue="Application.ClientDemo" />
         <item itemvalue="Application.ServerDemo" />
-        <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -452,6 +480,15 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
@@ -465,11 +502,11 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990228" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39770868" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32569557" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
@@ -574,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/views/ChatForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/ServerDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -605,26 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/threads/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="62" column="13" lean-forward="true" selection-start-line="56" selection-start-column="11" selection-end-line="62" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/threads/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Group.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -635,10 +645,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/threads/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/threads/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/simplechat/views/ChatForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+          <folding>
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+        <state relative-caret-position="323">
+          <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -647,18 +688,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="68" column="80" selection-start-line="68" selection-start-column="80" selection-end-line="68" selection-end-column="80" />
+        <state relative-caret-position="342">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/threads/Main.java">
+    <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        <state relative-caret-position="175">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bai13/src/main/java/socket/groupchat/ManualClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
