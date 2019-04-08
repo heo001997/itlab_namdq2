@@ -41,6 +41,7 @@ public class ChatForm extends JFrame implements ActionListener {
         panel1.add(btnSend, BorderLayout.EAST);
 
         taGroup = new JTextArea();
+        taGroup.setEnabled(false);
         panel2.add(taGroup, BorderLayout.CENTER);
         panel2.add(panel1, BorderLayout.SOUTH);
 

@@ -1,6 +1,7 @@
 package socket.simplechat.threads;
 
 import socket.simplechat.models.Message;
+import socket.simplechat.utils.Global;
 import socket.simplechat.views.ChatForm;
 
 import java.io.*;
@@ -11,8 +12,6 @@ public class Client extends Thread implements ChatForm.Listener {
     private String ip;
     private int port;
     private String name;
-    private Message message;
-    private boolean firstConnect;
 
     private BufferedWriter writer;
     private BufferedReader reader;
@@ -22,7 +21,8 @@ public class Client extends Thread implements ChatForm.Listener {
         this.port = port;
         this.name = name;
 
-        this.firstConnect = true;
+        this.chatForm = new ChatForm(name);
+        this.chatForm.setListener(this);
     }
 
     @Override
@@ -34,21 +34,19 @@ public class Client extends Thread implements ChatForm.Listener {
             reader = new BufferedReader(new InputStreamReader(socketClient.getInputStream()));
             writer = new BufferedWriter(new OutputStreamWriter(socketClient.getOutputStream()));
 
-            writer.write(name);
+            writer.write(name + Global.REGEX + "da ket noi!");
             writer.newLine();
             writer.flush();
 
-            showForm();
-
             while (true) {
-                String data = reader.readLine().trim();
-                if (firstConnect) {
-                    this.message = new Message(data, "da ket noi!");
-                    this.firstConnect = false;
-                } else {
-                    this.message.setMessage(data);
+                String input = reader.readLine().trim();
+                String[] datas = input.split(Global.REGEX);
+                try {
+                    Message message = new Message(datas[0], datas[1]);
+                    this.chatForm.pushMessage(message);
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.fillInStackTrace();
                 }
-                this.chatForm.pushMessage(this.message);
             }
 
         } catch (IOException e) {
@@ -64,25 +62,15 @@ public class Client extends Thread implements ChatForm.Listener {
         }
     }
 
-    private void showForm() {
-        this.chatForm = new ChatForm(name);
-        this.chatForm.setListener(this);
-    }
-
-    public void btnSendClick(String e) {
+    public void btnSendClick(String message) {
         try {
-            writer.write(e);
+            writer.write(name + Global.REGEX + message);
             writer.newLine();
             writer.flush();
 
-            this.chatForm.pushMessage(new Message("Toi", e));
+            this.chatForm.pushMessage(new Message("Toi", message));
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        Client client = new Client("client", "localhost", 5555);
-        client.start();
     }
 }
