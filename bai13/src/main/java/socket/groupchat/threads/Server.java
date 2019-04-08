@@ -3,52 +3,48 @@ package socket.groupchat.threads;
 
 import socket.groupchat.utils.Global;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
-import java.net.*;
+import java.io.OutputStreamWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
 
-public class Server {
-    private static DatagramSocket socket;
-    private static InetAddress group;
-    private static byte[] buf;
+public class Server extends Thread {
+    private int port;
+    private String name;
 
-    public static void pushMessage(String message) {
+    public Server(String name, int port) {
+        this.name = name;
+        this.port = port;
+    }
+
+    @Override
+    public void run() {
+        ServerSocket serverSocket;
+        Socket socket = null;
+        BufferedWriter writer = null;
+
+        System.out.println("Server is running...\n");
         try {
-            socket = new DatagramSocket();
-            group = InetAddress.getByName(Global.GROUP_IP);
-            buf = message.getBytes();
+            serverSocket = new ServerSocket(this.port);
+            while (true) {
+                socket = serverSocket.accept();
+                writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 
-            DatagramPacket packet = new DatagramPacket(buf, buf.length, group, Global.GROUP_PORT);
-            socket.send(packet);
-            socket.close();
-        } catch (SocketException e) {
-            e.printStackTrace();
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
+                writer.write(Global.GROUP_IP + Global.REGEX + Global.GROUP_PORT);
+                writer.newLine();
+                writer.flush();
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-
-        }
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-
-        Client client = new Client();
-        client.start();
-
-        client = new Client();
-        client.start();
-
-        client = new Client();
-        client.start();
-
-        client = new Client();
-        client.start();
-
-
-        while (true) {
-            Thread.sleep(3000);
-            pushMessage("hahaha");
+            try {
+                socket.close();
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

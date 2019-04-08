@@ -1,43 +1,86 @@
 package socket.groupchat.threads;
 
-
 import socket.groupchat.utils.Global;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.InetAddress;
-import java.net.MulticastSocket;
+import java.io.InputStreamReader;
+import java.net.*;
 
 public class Client extends Thread {
-    private MulticastSocket socket = null;
     private byte[] buf = new byte[256];
+    private String ip;
+    private int port;
+    private String name;
+
+    public Client(String name, String ip, int port) {
+        this.name = name;
+        this.ip = ip;
+        this.port = port;
+    }
 
     @Override
     public void run() {
-        InetAddress group = null;
-        System.out.println(Thread.currentThread().getName() + " is running:");
+        Socket socket;
+        BufferedReader reader;
+
+
         try {
-            socket = new MulticastSocket(Global.GROUP_PORT);
-            group = InetAddress.getByName(Global.GROUP_IP);
-            socket.joinGroup(group);
+            socket = new Socket(this.ip, this.port);
+            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
+            String groupIP = null;
+            int groupPort = 0;
             while (true) {
-                DatagramPacket packet = new DatagramPacket(buf, buf.length);
-                socket.receive(packet);
+                try {
+                    String message = reader.readLine().trim();
+                    String[] data = message.split(Global.REGEX);
+                    groupIP = data[0];
+                    groupPort = Integer.valueOf(data[1]);
 
-                String receive = new String(packet.getData(), 0, packet.getLength());
-
-                System.out.println(Thread.currentThread().getName() + ": " + receive);
+                    System.out.println(this.name + ": received  group!");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.fillInStackTrace();
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                } finally {
+                    break;
+                }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
+
+            InetAddress group = null;
+            MulticastSocket user = null;
+
             try {
-                socket.leaveGroup(group);
-                socket.close();
+                System.out.println(this.name + ": connecting to group...");
+
+                user = new MulticastSocket(groupPort);
+                group = InetAddress.getByName(groupIP);
+                user.joinGroup(group);
+
+                System.out.println(this.name + ": was connecting to group, starting chat!");
+
+                while (true) {
+                    DatagramPacket packet = new DatagramPacket(this.buf, this.buf.length);
+                    user.receive(packet);
+                    String receive = new String(packet.getData(), 0, packet.getLength());
+                    System.out.println(this.name + " received: '" + receive + "'");
+                }
             } catch (IOException e) {
                 e.printStackTrace();
+            } finally {
+                try {
+                    user.leaveGroup(group);
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

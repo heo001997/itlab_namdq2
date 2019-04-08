@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class ClientDemo {
     public static void main(String[] args) throws IOException {
-        Client client = new Client("Mr. Client", Global.IP, Global.PORT);
+        Client client = new Client("Mr. Group", Global.IP, Global.PORT);
         client.start();
     }
 }
