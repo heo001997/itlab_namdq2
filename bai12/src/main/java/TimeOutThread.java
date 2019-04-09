@@ -24,7 +24,7 @@ public class TimeOutThread extends Thread {
                     break;
                 }
                 try {
-                    timeWait = condition.await(timeWait, TimeUnit.MILLISECONDS);
+                    timeWait = condition.await(timeOut, timeUnit);
                 } catch (InterruptedException ie) {
                     break;
                 }
