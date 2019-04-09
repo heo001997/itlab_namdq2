@@ -10,7 +10,6 @@ public class TimeOutThread extends Thread {
     public TimeOutThread(long timeOut, TimeUnit timeUnit) {
         this.lock = new ReentrantLock();
         this.condition = lock.newCondition();
-        timeWait = timeUnit.toNanos(timeOut);
     }
 
     public void run() {
@@ -25,7 +24,7 @@ public class TimeOutThread extends Thread {
                     break;
                 }
                 try {
-                    timeWait = condition.awaitNanos(timeWait);
+                    timeWait = condition.await(timeWait, TimeUnit.MILLISECONDS);
                 } catch (InterruptedException ie) {
                     break;
                 }
